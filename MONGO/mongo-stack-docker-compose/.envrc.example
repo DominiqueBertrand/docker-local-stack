@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export MONGODB_DATA_VOLUME=coog-services
+export MONGO_INITDB_ROOT_USERNAME=coog
+export MONGO_INITDB_ROOT_PASSWORD=coog
+export MONGODB_DATA_VOLUME=$PWD/data
