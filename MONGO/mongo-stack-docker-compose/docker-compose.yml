@@ -1,6 +1,6 @@
 # docker compose -f mongo-stack.yml up --force-recreate -d 
 
-version: '3.1'
+version: '3.8'
 
 services:
   mongo:

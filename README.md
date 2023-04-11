@@ -2,7 +2,7 @@
 
 Creating a local development environment can seem like a challenge. Who never suffered ~ at least a little ~ to get the dependencies running on their machine to create a project?
 
-Yeah, we usually go through that almost every time. Before discovering Docker, this was much more difficult... Having to upload a database locally always caused some kind of headache, even more so when you needed to have a specific version due to an existing project that needed to be updated. maintenance.
+We usually go through that almost every time. Before discovering Docker, this was much more difficult... Having to upload a database locally always caused some kind of headache, even more so when you needed to have a specific version due to an existing project that needed to be updated. maintenance.
 
 The idea is to help you set up a local development environment quickly and easily using everything with Docker. Also, I'll show you some support tools that can help a lot when debugging some things.
 

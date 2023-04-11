@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  # POSTGRESQL
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - global-default  
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER:-coog}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-coog}"
+    volumes:
+      - ${POSTGRES_DATA_VOLUME:?}/pg_data:/var/lib/postgresql/data
+  # PGADMIN
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "5050:80"
+    networks:
+      - global-default    
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:?}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+      - ${PGADMIN_DATA_VOLUME:POSTGRES_DATA_VOLUME}/pgadmin_data:/var/lib/pgadmin
